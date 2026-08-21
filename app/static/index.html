@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Critical Infrastructure Resilience Command Center</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="app-shell">
+<aside class="sidebar" aria-label="Dashboard navigation">
+<div class="brand">
+<span class="brand-mark">CI</span>
+<div><b>Resilience Center</b><small>Synthetic twin</small></div>
+</div>
+<nav>
+<a href="#overview">Overview</a>
+<a href="#scenarios">Scenarios</a>
+<a href="#assets">Assets</a>
+<a href="#migration">Migration</a>
+<a href="#events">Incidents</a>
+</nav>
+<div class="sidebar-note">No PLC, SCADA, actuator, setpoint or shutdown interface.</div>
+</aside>
+
+<main>
+<header id="overview">
+<div>
+<p class="eyebrow">Critical Infrastructure Resilience Command Center</p>
+<h1>Unified cyber, crypto and asset-health dashboard</h1>
+<p>Monitor a synthetic digital twin, test incident scenarios, and prioritize human-reviewed resilience actions.</p>
+</div>
+<div class="status-card">
+<span>Current posture</span>
+<strong id="posture">Loading</strong>
+<small id="updated">Waiting for API</small>
+</div>
+</header>
+
+<section class="scoreboard" aria-label="Resilience scores">
+<div class="score main"><span>Overall resilience</span><strong id="overall">0</strong><small id="overallHint">Calculating</small></div>
+<div class="score"><span>Cyber resilience</span><strong id="cyber">0</strong><small>Zero Trust + identity</small></div>
+<div class="score"><span>Physical resilience</span><strong id="physical">0</strong><small>Health + failure risk</small></div>
+<div class="score"><span>PQC readiness</span><strong id="pqc">0</strong><small>Migration maturity</small></div>
+<div class="score"><span>Availability</span><strong id="availability">0%</strong><small>Operational assets</small></div>
+</section>
+
+<section class="grid control-grid">
+<div class="panel">
+<div class="section-heading"><div><p class="eyebrow">Risk model</p><h2>Resilience domains</h2></div><span class="pill">Live</span></div>
+<div class="domain"><label>Cyber / Zero Trust</label><div><i id="barCyber"></i></div><b id="txtCyber">0</b></div>
+<div class="domain"><label>Post-quantum migration</label><div><i id="barPqc"></i></div><b id="txtPqc">0</b></div>
+<div class="domain"><label>Physical asset health</label><div><i id="barPhysical"></i></div><b id="txtPhysical">0</b></div>
+<div class="domain"><label>Operational availability</label><div><i id="barAvailability"></i></div><b id="txtAvailability">0</b></div>
+</div>
+
+<div class="panel" id="scenarios">
+<div class="section-heading"><div><p class="eyebrow">Simulation</p><h2>Scenario laboratory</h2></div><button id="reset" class="ghost-button">Reset twin</button></div>
+<p>Apply synthetic events and watch resilience, incidents, and migration priorities update.</p>
+<div class="buttons">
+<button data-s="baseline"><span>Baseline</span><small>Normalize status</small></button>
+<button data-s="ransomware_disruption"><span>Cyber disruption</span><small>Identity event</small></button>
+<button data-s="pqc_migration_wave"><span>PQC migration</span><small>Upgrade backlog</small></button>
+<button data-s="bearing_degradation"><span>Bearing degradation</span><small>Reliability risk</small></button>
+<button data-s="compressor_overheat"><span>Compressor overheat</span><small>Thermal stress</small></button>
+<button data-s="cascading_event"><span>Cyber-physical cascade</span><small>Compound impact</small></button>
+</div>
+<div id="scenario" class="scenario-output">Select a scenario to view impact and decision rules.</div>
+</div>
+</section>
+
+<section class="panel" id="assets">
+<div class="section-heading"><div><p class="eyebrow">Digital twin</p><h2>Critical assets</h2></div><div class="toolbar"><input id="assetSearch" type="search" placeholder="Search assets"><select id="assetFilter" aria-label="Asset risk filter"><option value="all">All risk levels</option><option value="critical">Critical failure risk</option><option value="high">High failure risk</option><option value="good">Stable assets</option></select></div></div>
+<div class="asset-summary" id="assetSummary"></div>
+<div class="table"><table>
+<thead><tr><th>Asset</th><th>Zone</th><th>Criticality</th><th>Health</th><th>Failure</th><th>RUL</th><th>Crypto</th><th>PQC</th><th>Trust</th></tr></thead>
+<tbody id="assetRows"></tbody>
+</table></div>
+</section>
+
+<section class="grid bottom-grid">
+<div class="panel" id="migration">
+<div class="section-heading"><div><p class="eyebrow">Cryptography</p><h2>PQC migration queue</h2></div></div>
+<div id="migrationContent"></div>
+</div>
+<div class="panel" id="events">
+<div class="section-heading"><div><p class="eyebrow">Correlation</p><h2>Incident timeline</h2></div></div>
+<div id="eventList"></div>
+</div>
+</section>
+
+<section class="panel decision-layer">
+<h2>Human decision layer</h2>
+<div class="callout">
+<b>AI and automation boundary:</b>
+Predictions and risk scores are decision support only. Maintenance and security actions require human validation.
+</div>
+</section>
+</main>
+</div>
+<script src="/static/app.js"></script>
+</body>
+</html>

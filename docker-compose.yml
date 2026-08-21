@@ -1,0 +1,12 @@
+services:
+  resilience-center:
+    build: .
+    ports:
+      - "8003:8003"
+    environment:
+      DATABASE_URL: sqlite:///./data/resilience.db
+    volumes:
+      - resilience-data:/app/data
+
+volumes:
+  resilience-data:
