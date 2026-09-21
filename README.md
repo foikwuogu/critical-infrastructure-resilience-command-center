@@ -1,5 +1,7 @@
 # Critical Infrastructure Resilience Command Center
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22866297.svg)](https://doi.org/10.5281/zenodo.22866297)
+
 Project #4 in a research portfolio for secure, resilient critical infrastructure.
 
 This project integrates three independent capabilities:
@@ -167,3 +169,19 @@ It is intended as an experimental platform for future research on:
 - cross-domain risk correlation
 - resilience scoring
 - human-in-the-loop decision support
+
+## Citation
+
+If you use this work, please cite:
+
+```
+Friday Ogochukwu Ikwuogu. Critical Infrastructure Resilience Command Center.
+Zenodo. https://doi.org/10.5281/zenodo.22866297
+```
+
+DOI: [10.5281/zenodo.22866297](https://doi.org/10.5281/zenodo.22866297)
+
+**Author:** Friday Ogochukwu Ikwuogu
+ORCID: [0009-0009-2222-1318](https://orcid.org/0009-0009-2222-1318)
+Affiliation: Independent Researcher, Odessa, Texas, USA
+
