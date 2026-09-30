@@ -185,3 +185,6 @@ DOI: [10.5281/zenodo.22866297](https://doi.org/10.5281/zenodo.22866297)
 ORCID: [0009-0009-2222-1318](https://orcid.org/0009-0009-2222-1318)
 Affiliation: Independent Researcher, Odessa, Texas, USA
 
+## AI assistance
+
+**AI assistance:** AI coding tools (Claude, Anthropic) were used for code scaffolding, test fixtures, and documentation drafting. The problem definition, methodology, classification rules, mappings, and analytic decisions are the author's own.
